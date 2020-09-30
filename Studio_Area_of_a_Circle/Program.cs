@@ -9,13 +9,13 @@ namespace Studio_Area_of_a_Circle
             Console.Write("Enter a radius: ");
             string userInput = Console.ReadLine();
             double radius = double.Parse(userInput);
-          
-            double area = radius * radius * Math.PI;
-            double circumference = 2 * radius * Math.PI;
-            if(radius >= 0)
+
+            double area = Math.Round(Math.PI * Math.Pow(radius, 2) * 100) / 100;
+            double circumference = Math.Round(2 * radius * Math.PI*100)/100;
+            if (radius >= 0 )
             {
-                Console.WriteLine("The area of a circle of radius " + userInput + " is : " + area);
-                Console.WriteLine("The circumference of a circle of radius " + userInput + " is : " + circumference + "\n");
+                Console.WriteLine($"The area of a circle of radius { userInput} is: { area} ");
+                Console.WriteLine($"The circumference of a circle of radius {userInput} is: {circumference}  \n ");
 
                 Console.Write("Enter miles per gallon of your car :");
                 userInput = Console.ReadLine();
